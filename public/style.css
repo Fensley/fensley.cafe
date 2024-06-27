@@ -1,0 +1,182 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #ecdacd;
+  padding: 30px;
+  font-family: "Open Sans", sans-serif;
+}
+section {
+  background-color: #ffff;
+  height: fit-content;
+  /* height: 160vh; */
+  /* height: fit-content; */
+}
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.main1 {
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  background-color: black;
+  height: 35px;
+  align-items: center;
+  padding: 0 10px;
+  width: 90%;
+  margin-top: 25px;
+}
+.deli-sec,
+.about-sec {
+  display: flex;
+  gap: 20px;
+}
+.img-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 80px;
+}
+img {
+  width: 50%;
+  height: 20%;
+  object-fit: cover;
+  position: relative;
+}
+.serenity {
+  font-family: "Playfair Display", serif;
+  color: orangered;
+  font-size: 13vw;
+  position: absolute;
+  z-index: 1;
+}
+.our {
+  font-size: 12vw;
+  font-family: "Playfair Display", serif;
+  text-align: center;
+  margin-top: 40px;
+  color: orangered;
+}
+/*  */
+.discover-ctn {
+  margin-top: 50px;
+  padding: 0 30px;
+  text-align: center;
+}
+.disco-second-child {
+  margin-top: 40px;
+  display: flex;
+  gap: 20px;
+}
+.fa-wifi,
+.fa-couch,
+.fa-cat {
+  font-size: 30px;
+  margin-bottom: 20px;
+  color: orange;
+}
+.thish2 {
+  margin-bottom: 20px;
+}
+
+.cozy {
+  margin-bottom: 10px;
+  /* color: orangered; */
+}
+.discover {
+  font-size: 30px;
+  margin-bottom: 15px;
+}
+.welcome {
+  padding: 20px;
+}
+.discover-action {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+}
+button {
+  padding: 10px 20px;
+  background-color: white;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+.btn1 {
+  border: 1px solid;
+}
+.btn1:hover {
+  border: 1px dashed;
+  transition: 0.3s ease;
+}
+.btn2:hover {
+  background-color: orangered;
+  color: white;
+  transition: 0.3s ease;
+}
+/*  */
+.menu {
+  margin-top: 30px;
+  /* padding: 0 40px; */
+}
+.menu-drinks {
+  display: flex;
+  gap: 2vh;
+  color: orangered;
+  margin-left: 30px;
+  margin-bottom: 15px;
+}
+.latte {
+  color: orangered;
+}
+.menu-drinks {
+  font-size: 2vw;
+}
+.long-bar {
+  border-bottom: 1px solid black;
+  width: 100%;
+}
+.drinkname {
+  display: flex;
+  gap: 50px;
+  font-size: 6vw;
+  margin-left: 15px;
+}
+.latte-span {
+  font-size: 1.4vh;
+  background-color: orangered;
+  color: white;
+  margin-left: 5px;
+}
+/*  */
+footer {
+  width: 100%;
+  /* padding-bottom: 20px; */
+}
+.main2 {
+  width: 100%;
+  margin-bottom: 3px;
+}
+.forall {
+  background-color: rgb(0, 0, 0);
+  /* border: 1px solid; */
+}
+.last {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  color: white;
+  font-size: 10px;
+}
