@@ -4,16 +4,14 @@ export default function App() {
 
 function Box() {
   return (
-    <>
-      <section>
-        <Main />
-        <Forimg />
-        <Discover />
-        <Menu />
-        <MenuItem />
-        <Footer />
-      </section>
-    </>
+    <section>
+      <Main />
+      <Forimg />
+      <Discover />
+      <Menu />
+      <MenuItem />
+      <Footer />
+    </section>
   );
 }
 

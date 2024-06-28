@@ -16,7 +16,6 @@ section {
   background-color: #ffff;
   height: fit-content;
   /* height: 160vh; */
-  /* height: fit-content; */
 }
 nav {
   display: flex;
@@ -178,5 +177,8 @@ footer {
   justify-content: center;
   background-color: black;
   color: white;
-  font-size: 10px;
+  font-size: 13px;
+  font-family: monospace;
+  padding-bottom: 10px;
+  color: gray;
 }
