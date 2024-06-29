@@ -26,11 +26,11 @@ function Main() {
         <div className="about-sec">
           <p id="menu">Menu </p>
           <p>Shop</p>
-          <p>Press</p>
+          <p className="press">Press</p>
         </div>
 
         <div className="deli-sec">
-          <p>Delivery</p>
+          <p className="delivery">Delivery</p>
           <p> Cart (3)</p>
         </div>
       </div>
@@ -153,7 +153,7 @@ function Footer() {
       <div className="forall">
         <div className="main1 main2">
           <div>
-            <p>Fens.co</p>
+            <p className="fensco">Fens.co</p>
           </div>
 
           <div className="about-sec">

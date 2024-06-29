@@ -74,7 +74,8 @@ img {
 .disco-second-child {
   margin-top: 40px;
   display: flex;
-  gap: 20px;
+  justify-content: center;
+  gap: 30px;
 }
 .fa-wifi,
 .fa-couch,
@@ -181,4 +182,27 @@ footer {
   font-family: monospace;
   padding-bottom: 10px;
   color: gray;
+}
+@media (max-width: 744px) {
+  .disco-second-child {
+    flex-direction: column;
+  }
+  .delivery {
+    display: none;
+  }
+  .press {
+    display: none;
+  }
+  .drinkname {
+    font-size: 5vw;
+  }
+}
+@media (max-width: 770px) {
+  .about-sec p,
+  .fensco {
+    font-size: 10px;
+  }
+  .last p {
+    font-size: 9px;
+  }
 }
