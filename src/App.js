@@ -31,7 +31,7 @@ function Main() {
 
         <div className="deli-sec">
           <p className="delivery">Delivery</p>
-          <p> Cart (5)</p>
+          <p> Cart (3)</p>
         </div>
       </div>
     </nav>
