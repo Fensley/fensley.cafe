@@ -75,7 +75,7 @@ function Discover() {
 
         <div className="one-d">
           <i className="fa-solid fa-cat"></i>
-          <h2 className="thish2"> Pet-friendly</h2>
+          <h2 className="thish2">Pet-friendly</h2>
           <p>
             Bring your furry friends along and enjoy our pet-friendly
             atmosphere.
