@@ -12,6 +12,10 @@ body {
   padding: 30px;
   font-family: "Open Sans", sans-serif;
 }
+a {
+  color: white;
+  text-decoration: none;
+}
 section {
   background-color: #ffff;
   height: fit-content;
@@ -36,7 +40,7 @@ nav {
 .deli-sec,
 .about-sec {
   display: flex;
-  gap: 20px;
+  gap: 15px;
 }
 .img-center {
   display: flex;

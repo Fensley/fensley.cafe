@@ -1,3 +1,9 @@
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import Cart from "./compoment/Cart";
+import Delivery from "./compoment/Delivery";
+import Press from "./compoment/Press";
+import Shop from "./compoment/Shop";
+
 export default function App() {
   return <Box />;
 }
@@ -11,8 +17,16 @@ function Box() {
       <Menu />
       <MenuItem />
       <Footer />
+      <Routes>
+        <Route path="/press" element={<Press />} />
+      </Routes>
     </section>
   );
+}
+{
+  /* <Routes>
+  <Route path="/press" element={<Press />} />
+</Routes>; */
 }
 
 function Main() {
@@ -24,14 +38,19 @@ function Main() {
         </div>
 
         <div className="about-sec">
-          <p id="menu">Menu </p>
+          <p>
+            <a href="#menu">Menu</a>
+          </p>
           <p>Shop</p>
-          <p className="press">Press</p>
+
+          <p className="press">
+            <Link to={"/press"}>Press</Link>
+          </p>
         </div>
 
         <div className="deli-sec">
           <p className="delivery">Delivery</p>
-          <p> Cart (4)</p>
+          <p> Cart (3)</p>
         </div>
       </div>
     </nav>
@@ -53,94 +72,136 @@ function Forimg() {
 function Discover() {
   return (
     <div className="discover-ctn">
-      <div className="disc-child1">
-        <p className="cozy">- Cozy -</p>
-        <h1 className="discover">
-          Discover Our Charming Café <br /> Experience
-        </h1>
-        <p className="welcome">
-          Welcome to our cozy café shop, where you can relax, enjoy delicious
-          food and drinks, and connect with friends. With our free Wi-Fi,
-          pet-friendly environment, and outdoor seating, we offer the perfect
-          setting for a memorable café experience.
-        </p>
-      </div>
-      {/*  */}
-      <div className="disco-second-child">
-        <div className="one-d">
-          <i className="fa-solid fa-wifi"></i>
-          <h2 className="thish2"> Free Wi-Fi</h2>
-          <p>Stay connected with our complimentary Wi-Fi service.</p>
-        </div>
-
-        <div className="one-d">
-          <i className="fa-solid fa-cat"></i>
-          <h2 className="thish2">Pet-friendly</h2>
-          <p>
-            Bring your furry friends along and enjoy our pet-friendly
-            atmosphere.
-          </p>
-        </div>
-
-        <div className="one-d">
-          <i className="fa-solid fa-couch"></i>
-          <h2 className="thish2">Outdoor Seating</h2>
-          <p>
-            Relax and soak up the sun in our comfortable outdoor seating area.
-          </p>
-        </div>
-      </div>
-      {/*  */}
-      <div className="discover-action">
-        <button className="btn1">Learn More</button>
-        <button className="btn2">
-          Order <i class="fa-solid fa-chevron-right"></i>{" "}
-        </button>
-      </div>
+      <Welcome />
+      <DiscoverData />
+      <DiscoverButton />
     </div>
   );
 }
+
+function Welcome() {
+  return (
+    <div className="disc-child1">
+      <p className="cozy">- Cozy -</p>
+      <h1 className="discover">
+        Discover Our Charming Café <br /> Experience
+      </h1>
+      <p className="welcome">
+        Welcome to our cozy café shop, where you can relax, enjoy delicious food
+        and drinks, and connect with friends. With our free Wi-Fi, pet-friendly
+        environment, and outdoor seating, we offer the perfect setting for a
+        memorable café experience.
+      </p>
+    </div>
+  );
+}
+
+function DiscoverData() {
+  return (
+    <div className="disco-second-child">
+      <DataOne />
+      <DataTwo />
+      <DataTwee />
+    </div>
+  );
+}
+
+function DataOne() {
+  return (
+    <div className="one-d">
+      <i className="fa-solid fa-wifi"></i>
+      <h2 className="thish2"> Free Wi-Fi</h2>
+      <p>Stay connected with our complimentary Wi-Fi service.</p>
+    </div>
+  );
+}
+function DataTwo() {
+  return (
+    <div className="one-d">
+      <i className="fa-solid fa-cat"></i>
+      <h2 className="thish2">Pet-friendly</h2>
+      <p>
+        Bring your furry friends along and enjoy our pet-friendly atmosphere.
+      </p>
+    </div>
+  );
+}
+function DataTwee() {
+  return (
+    <div className="one-d">
+      <i className="fa-solid fa-couch"></i>
+      <h2 className="thish2">Outdoor Seating</h2>
+      <p>Relax and soak up the sun in our comfortable outdoor seating area.</p>
+    </div>
+  );
+}
+
+function DiscoverButton() {
+  return (
+    <div className="discover-action">
+      <button className="btn1">Learn More</button>
+      <button className="btn2">
+        Order <i class="fa-solid fa-chevron-right"></i>{" "}
+      </button>
+    </div>
+  );
+}
+
 function Menu() {
-  return <h1 className="our">Our Menu</h1>;
+  return (
+    <h1 className="our" id="menu">
+      Our Menu
+    </h1>
+  );
 }
 function MenuItem() {
   return (
     <div className="menu">
-      <div className="menu-drinks">
-        <p>Coffee(8) / </p>
-        <p>Tea(5) /</p>
-        <p>Cocoa(8) / </p>
-        <p>Summer(12)</p>
-      </div>
-      {/*  */}
-      <div className="menu-items">
-        <LongBar />
-        <div className="drinkname">
-          <p>Filter coffee {"..."}</p>
-          <p>Macchiato</p>
-        </div>
-        <LongBar />
+      <MenuDrink />
+      <MenuName />
+    </div>
+  );
+}
 
-        <div className="drinkname">
-          <p>Americano {"..."}</p>
-          <p>Mocco</p>
-        </div>
-        <LongBar />
-
-        <div className="drinkname">
-          <p>Capuccino {"..."}</p>
-          <p>Chocolate </p>
-        </div>
-        <LongBar />
-        <div className="drinkname">
-          <p className="latte">
-            Latte
-            <span className="latte-span">45/60/90 ml</span> {"..."}
-          </p>
-          <p>Doppio</p>
-        </div>
-        <LongBar />
+function MenuName() {
+  return (
+    <div className="menu-items">
+      <LongBar />
+      <div className="drinkname">
+        <p>Filter coffee {"..."}</p>
+        <p>Macchiato</p>
       </div>
+      <LongBar />
+
+      <div className="drinkname">
+        <p>Americano {"..."}</p>
+        <p>Mocco</p>
+      </div>
+      <LongBar />
+
+      <div className="drinkname">
+        <p>Capuccino {"..."}</p>
+        <p>Chocolate </p>
+      </div>
+      <LongBar />
+      <div className="drinkname">
+        <p className="latte">
+          Latte
+          <span className="latte-span">45/60/90 ml</span>
+        </p>
+        <p>Doppio</p>
+      </div>
+      <LongBar />
+    </div>
+  );
+}
+function MenuDrink() {
+  return (
+    <div className="menu-drinks">
+      <p>Coffee(8) / </p>
+      <p>Tea(5) /</p>
+      <p>Cocoa(8) / </p>
+      <p>Summer(12)</p>
     </div>
   );
 }
@@ -151,26 +212,32 @@ function Footer() {
   return (
     <footer>
       <div className="forall">
-        <div className="main1 main2">
-          <div>
-            <p className="fensco">Fens.co</p>
-          </div>
-
-          <div className="about-sec">
-            <p>About Us </p>
-            <p>Contact Us</p>
-            <p>Event</p>
-          </div>
-
-          <div className="deli-sec">
-            <i className="fa-brands fa-instagram"></i>
-            <i class="fa-solid fa-x"></i>
-          </div>
-        </div>
+        <ForallData />
         <div className="last">
           <p>© 2024 Fensley Cafe. All rights reserved.</p>
         </div>
       </div>
     </footer>
+  );
+}
+
+function ForallData() {
+  return (
+    <div className="main1 main2">
+      <div>
+        <p className="fensco">Fens.co</p>
+      </div>
+
+      <div className="about-sec">
+        <p>About Us </p>
+        <p>Contact Us</p>
+        <p>Event</p>
+      </div>
+
+      <div className="deli-sec">
+        <i className="fa-brands fa-instagram"></i>
+        <i class="fa-solid fa-x"></i>
+      </div>
+    </div>
   );
 }
