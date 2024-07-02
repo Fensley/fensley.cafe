@@ -1,0 +1,43 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bona+Nova+SC:ital,wght@0,400;0,700;1,400&display=swap");
+
+.shop-about {
+  padding: 70px;
+  /* margin-top: 20px; */
+  display: flex;
+  gap: 20px;
+}
+.shop-about-data {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+}
+.adress {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  color: orangered;
+  font-size: 8vw;
+  font-family: "Playfair Display", serif;
+}
+.elm {
+  font-size: 20px;
+  border: 1px dotted black;
+  padding: 10px;
+}
+.hub {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 50px;
+  font-family: "Bona Nova SC", serif;
+}
+.pressimage,
+.shopimage {
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}

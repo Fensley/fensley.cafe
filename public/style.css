@@ -141,6 +141,7 @@ button {
   margin-left: 30px;
   margin-bottom: 15px;
 }
+
 .latte {
   color: orangered;
 }
@@ -191,12 +192,7 @@ footer {
   .disco-second-child {
     flex-direction: column;
   }
-  .delivery {
-    /* display: none; */
-  }
-  .press {
-    /* display: none; */
-  }
+
   .drinkname {
     font-size: 5vw;
   }

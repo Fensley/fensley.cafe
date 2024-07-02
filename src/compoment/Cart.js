@@ -1,3 +1,9 @@
+import "../style/Cart.css";
+
 export default function cart() {
-  return <h1> your cart have (3) items</h1>;
+  return (
+    <div className="cart-ctn">
+      <h1> you have (3) items in carts</h1>
+    </div>
+  );
 }

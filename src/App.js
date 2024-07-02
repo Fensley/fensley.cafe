@@ -2,7 +2,6 @@ import { Routes, Route, Link } from "react-router-dom";
 import Cart from "./compoment/Cart";
 import Delivery from "./compoment/Delivery";
 import Press from "./compoment/Press";
-import Shop from "./compoment/Shop";
 import About from "./compoment/About";
 import imag from "./data/fenscafe.avif";
 
@@ -17,19 +16,6 @@ export default function App() {
               <section>
                 <Main />
                 <Press />
-                <Footer />
-              </section>
-            </>
-          }
-        />
-
-        <Route
-          path="/shop"
-          element={
-            <>
-              <section>
-                <Main />
-                <Shop />
                 <Footer />
               </section>
             </>
@@ -74,6 +60,20 @@ export default function App() {
             </>
           }
         />
+
+        <Route
+          path="/menu"
+          element={
+            <>
+              <section>
+                <Main />
+                <Menu />
+                <MenuItem />
+                <Footer />
+              </section>
+            </>
+          }
+        />
         <Route path="/" element={<Box />} />
       </Routes>
     </>
@@ -105,12 +105,10 @@ function Main() {
 
         <div className="about-sec">
           <p>
-            <a href="#menu">
-              <Link to={"/"}>Menu</Link>
-            </a>
+            <Link to={"/menu"}>Menu</Link>
           </p>
           <p>
-            <Link to={"/shop"}>Shop</Link>
+            <Link to={"/about"}>Shop</Link>
           </p>
 
           <p className="press">
@@ -211,7 +209,7 @@ function DiscoverButton() {
     <div className="discover-action">
       <button className="btn1">Learn More</button>
       <button className="btn2">
-        Order <i class="fa-solid fa-chevron-right"></i>{" "}
+        Order <i className="fa-solid fa-chevron-right"></i>{" "}
       </button>
     </div>
   );
@@ -295,7 +293,9 @@ function ForallData() {
   return (
     <div className="main1 main2">
       <div>
-        <p className="fensco">Fens.co</p>
+        <p className="fensco">
+          <Link to="/">Fens.co</Link>
+        </p>
       </div>
 
       <div className="about-sec">
@@ -312,7 +312,7 @@ function ForallData() {
 
       <div className="deli-sec">
         <i className="fa-brands fa-instagram"></i>
-        <i class="fa-solid fa-x"></i>
+        <i className="fa-solid fa-x"></i>
       </div>
     </div>
   );

@@ -1,0 +1,68 @@
+.delivery-ctn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  padding: 0 70px;
+}
+.enjoy {
+  max-width: 800px;
+  margin: 20px 0;
+}
+.delivery-item {
+  display: flex;
+}
+.fensbrew {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 30px 0;
+}
+.howits {
+  text-align: center;
+  margin-top: 20px;
+}
+.deliveryimage {
+  width: 100%;
+  height: 100%;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+.delivery-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+}
+.forbold {
+  font-weight: bold;
+}
+li {
+  margin-bottom: 10px;
+}
+.deliveryarea,
+.deliveryhours {
+  text-align: center;
+  color: orangered;
+  margin: 20px 0;
+  border-bottom: 1px solid;
+  width: fit-content;
+}
+.special-delivery {
+  text-align: center;
+  margin-top: 40px;
+}
+input {
+  padding: 10px;
+  margin: 5px;
+  width: 40%;
+  outline: none;
+}
+button {
+  background-color: orangered;
+  padding: 12px;
+  color: white;
+}
+.offer {
+  margin-bottom: 10px;
+}
