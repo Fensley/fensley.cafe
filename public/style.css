@@ -192,10 +192,10 @@ footer {
     flex-direction: column;
   }
   .delivery {
-    display: none;
+    /* display: none; */
   }
   .press {
-    display: none;
+    /* display: none; */
   }
   .drinkname {
     font-size: 5vw;
@@ -203,7 +203,9 @@ footer {
 }
 @media (max-width: 770px) {
   .about-sec p,
-  .fensco {
+  .fensco,
+  .deli-sec,
+  .main {
     font-size: 10px;
   }
   .last p {

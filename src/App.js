@@ -1,11 +1,83 @@
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { Routes, Route, Link } from "react-router-dom";
 import Cart from "./compoment/Cart";
 import Delivery from "./compoment/Delivery";
 import Press from "./compoment/Press";
 import Shop from "./compoment/Shop";
+import About from "./compoment/About";
+import imag from "./data/fenscafe.avif";
 
 export default function App() {
-  return <Box />;
+  return (
+    <>
+      <Routes>
+        <Route
+          path="/press"
+          element={
+            <>
+              <section>
+                <Main />
+                <Press />
+                <Footer />
+              </section>
+            </>
+          }
+        />
+
+        <Route
+          path="/shop"
+          element={
+            <>
+              <section>
+                <Main />
+                <Shop />
+                <Footer />
+              </section>
+            </>
+          }
+        />
+
+        <Route
+          path="/delivery"
+          element={
+            <>
+              <section>
+                <Main />
+                <Delivery />
+                <Footer />
+              </section>
+            </>
+          }
+        />
+
+        <Route
+          path="/cart"
+          element={
+            <>
+              <section>
+                <Main />
+                <Cart />
+                <Footer />
+              </section>
+            </>
+          }
+        />
+
+        <Route
+          path="/about"
+          element={
+            <>
+              <section>
+                <Main />
+                <About />
+                <Footer />
+              </section>
+            </>
+          }
+        />
+        <Route path="/" element={<Box />} />
+      </Routes>
+    </>
+  );
 }
 
 function Box() {
@@ -17,31 +89,29 @@ function Box() {
       <Menu />
       <MenuItem />
       <Footer />
-      <Routes>
-        <Route path="/press" element={<Press />} />
-      </Routes>
     </section>
   );
-}
-{
-  /* <Routes>
-  <Route path="/press" element={<Press />} />
-</Routes>; */
 }
 
 function Main() {
   return (
     <nav>
       <div className="main1">
-        <div>
-          <p>Main</p>
+        <div className="main">
+          <p>
+            <Link to={"/"}>Main</Link>
+          </p>
         </div>
 
         <div className="about-sec">
           <p>
-            <a href="#menu">Menu</a>
+            <a href="#menu">
+              <Link to={"/"}>Menu</Link>
+            </a>
           </p>
-          <p>Shop</p>
+          <p>
+            <Link to={"/shop"}>Shop</Link>
+          </p>
 
           <p className="press">
             <Link to={"/press"}>Press</Link>
@@ -49,8 +119,12 @@ function Main() {
         </div>
 
         <div className="deli-sec">
-          <p className="delivery">Delivery</p>
-          <p> Cart (3)</p>
+          <p className="delivery">
+            <Link to={"/delivery"}>Delivery</Link>
+          </p>
+          <p>
+            <Link to={"/cart"}>Cart (3)</Link>
+          </p>
         </div>
       </div>
     </nav>
@@ -61,11 +135,7 @@ function Forimg() {
   return (
     <div className="img-center">
       <p className="serenity"> Fensley brew</p>
-      <img
-        src="https://images.unsplash.com/photo-1536914629078-6fda32a00cd2?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-        alt="model"
-        height="100"
-      />
+      <img src={imag} alt="model" height="100" />
     </div>
   );
 }
@@ -229,9 +299,15 @@ function ForallData() {
       </div>
 
       <div className="about-sec">
-        <p>About Us </p>
-        <p>Contact Us</p>
-        <p>Event</p>
+        <p>
+          <Link to={"/about"}>About Us</Link>
+        </p>
+        <p>
+          <Link to={"/"}>Contact Us</Link>
+        </p>
+        <p>
+          <Link to={"/"}>Event</Link>
+        </p>
       </div>
 
       <div className="deli-sec">
