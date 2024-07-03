@@ -58,7 +58,7 @@ input {
   width: 40%;
   outline: none;
 }
-button {
+.delivery-btn {
   background-color: orangered;
   padding: 12px;
   color: white;

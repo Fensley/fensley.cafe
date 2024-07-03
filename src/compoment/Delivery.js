@@ -73,7 +73,7 @@ function Special() {
       <div>
         <input placeholder="Enter your email" />
 
-        <button>Sign up</button>
+        <button className="delivery-btn">Sign up</button>
       </div>
     </div>
   );

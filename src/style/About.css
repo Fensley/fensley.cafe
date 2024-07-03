@@ -3,7 +3,6 @@
 
 .shop-about {
   padding: 70px;
-  /* margin-top: 20px; */
   display: flex;
   gap: 20px;
 }
@@ -25,7 +24,7 @@
 }
 .elm {
   font-size: 20px;
-  border: 1px dotted black;
+  border: 1px dashed black;
   padding: 10px;
 }
 .hub {
