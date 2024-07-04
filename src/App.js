@@ -9,6 +9,35 @@ export default function App() {
   return (
     <>
       <Routes>
+        <Route path="/" element={<Box />} />
+
+        <Route
+          path="/menu"
+          element={
+            <>
+              <section className="sectwo">
+                <Main />
+                <Menu />
+                <MenuItem />
+                <Footer />
+              </section>
+            </>
+          }
+        />
+
+        <Route
+          path="/about"
+          element={
+            <>
+              <section>
+                <Main />
+                <About />
+                <Footer />
+              </section>
+            </>
+          }
+        />
+
         <Route
           path="/press"
           element={
@@ -47,34 +76,6 @@ export default function App() {
             </>
           }
         />
-
-        <Route
-          path="/about"
-          element={
-            <>
-              <section>
-                <Main />
-                <About />
-                <Footer />
-              </section>
-            </>
-          }
-        />
-
-        <Route
-          path="/menu"
-          element={
-            <>
-              <section>
-                <Main />
-                <Menu />
-                <MenuItem />
-                <Footer />
-              </section>
-            </>
-          }
-        />
-        <Route path="/" element={<Box />} />
       </Routes>
     </>
   );
