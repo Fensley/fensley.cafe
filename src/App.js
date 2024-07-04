@@ -223,6 +223,7 @@ function Menu() {
   );
 }
 function MenuItem() {
+  //
   return (
     <div className="menu">
       <MenuDrink />
@@ -230,7 +231,16 @@ function MenuItem() {
     </div>
   );
 }
-
+function MenuDrink() {
+  return (
+    <div className="menu-drinks">
+      <p>Coffee(8) / </p>
+      <p>Tea(5) /</p>
+      <p>Cocoa(8) / </p>
+      <p>Summer(12)</p>
+    </div>
+  );
+}
 function MenuName() {
   return (
     <div className="menu-items">
@@ -263,16 +273,7 @@ function MenuName() {
     </div>
   );
 }
-function MenuDrink() {
-  return (
-    <div className="menu-drinks">
-      <p>Coffee(8) / </p>
-      <p>Tea(5) /</p>
-      <p>Cocoa(8) / </p>
-      <p>Summer(12)</p>
-    </div>
-  );
-}
+
 function LongBar() {
   return <div className="long-bar"></div>;
 }

@@ -55,14 +55,23 @@ li {
 input {
   padding: 10px;
   margin: 5px;
-  width: 40%;
+  width: 50%;
   outline: none;
+  border: 1px solid orangered;
 }
 .delivery-btn {
   background-color: orangered;
   padding: 12px;
   color: white;
 }
+.delivery-btn:hover {
+  opacity: 0.6;
+}
 .offer {
   margin-bottom: 10px;
+}
+@media (max-width: 1399px) {
+  .delivery-item {
+    flex-direction: column;
+  }
 }

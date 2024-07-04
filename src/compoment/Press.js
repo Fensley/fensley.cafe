@@ -8,7 +8,7 @@ export default function About() {
       <Adress />
     </>
   );
-}
+} 
 function Hub() {
   return (
     <div className="hub">
