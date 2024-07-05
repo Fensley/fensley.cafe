@@ -4,7 +4,7 @@ import Delivery from "./compoment/Delivery";
 import Press from "./compoment/Press";
 import About from "./compoment/About";
 import imag from "./data/fenscafe.avif";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 export default function App() {
   return (
