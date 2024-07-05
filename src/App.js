@@ -4,80 +4,79 @@ import Delivery from "./compoment/Delivery";
 import Press from "./compoment/Press";
 import About from "./compoment/About";
 import imag from "./data/fenscafe.avif";
+import { useEffect, useState } from "react";
 
 export default function App() {
   return (
-    <>
-      <Routes>
-        <Route path="/" element={<Box />} />
+    <Routes>
+      <Route path="/" element={<Box />} />
 
-        <Route
-          path="/menu"
-          element={
-            <>
-              <section className="sectwo">
-                <Main />
-                <Menu />
-                <MenuItem />
-                <Footer />
-              </section>
-            </>
-          }
-        />
+      <Route
+        path="/menu"
+        element={
+          <>
+            <section className="sectwo">
+              <Main />
+              <Menu />
+              <MenuItem />
+              <Footer />
+            </section>
+          </>
+        }
+      />
 
-        <Route
-          path="/about"
-          element={
-            <>
-              <section>
-                <Main />
-                <About />
-                <Footer />
-              </section>
-            </>
-          }
-        />
+      <Route
+        path="/about"
+        element={
+          <>
+            <section>
+              <Main />
+              <About />
+              <Footer />
+            </section>
+          </>
+        }
+      />
 
-        <Route
-          path="/press"
-          element={
-            <>
-              <section>
-                <Main />
-                <Press />
-                <Footer />
-              </section>
-            </>
-          }
-        />
+      <Route
+        path="/press"
+        element={
+          <>
+            <section>
+              <Main />
+              <Press />
+              <Footer />
+            </section>
+          </>
+        }
+      />
 
-        <Route
-          path="/delivery"
-          element={
-            <>
-              <section>
-                <Main />
-                <Delivery />
-                <Footer />
-              </section>
-            </>
-          }
-        />
+      <Route
+        path="/delivery"
+        element={
+          <>
+            <section>
+              <Main />
+              <Delivery />
+              <Footer />
+            </section>
+          </>
+        }
+      />
 
-        <Route
-          path="/cart"
-          element={
-            <>
-              <section>
-                <Main />
-                <Cart />
-                <Footer />
-              </section>
-            </>
-          }
-        />
-      </Routes>
-    </>
+      <Route
+        path="/cart"
+        element={
+          <>
+            <section>
+              <Main />
+              <Cart />
+              <Footer />
+            </section>
+          </>
+        }
+      />
+    </Routes>
   );
 }
 
@@ -138,6 +137,7 @@ function Forimg() {
     </div>
   );
 }
+
 function Discover() {
   return (
     <div className="discover-ctn">
@@ -223,41 +223,80 @@ function Menu() {
     </h1>
   );
 }
+
 function MenuItem() {
+  const [first, setFirst] = useState(false);
+  const [second, setSecond] = useState(true);
+  const [third, setThird] = useState(true);
+  const [fouth, setFouth] = useState(true);
+
+  function handlefirst() {
+    setFirst(!second);
+    console.log(first);
+  }
+  function handlesecond() {
+    setSecond(!second);
+    console.log(second);
+  }
+
+  //
+  function handlethird() {
+    setThird(!third || !second);
+    console.log(third);
+  }
+  function handlefouth() {
+    // setFirst(false);
+    // setSecond(true);
+    setFirst(true);
+    setThird(true);
+    setFouth(true);
+    console.log(fouth);
+  }
   //
   return (
     <div className="menu">
-      <MenuDrink />
-      <MenuName />
+      <MenuDrink
+        handlefirst={handlefirst}
+        handlesecond={handlesecond}
+        handlethird={handlethird}
+        handlefouth={handlefouth}
+      />
+      <MenuName first={first} second={second} third={third} fouth={fouth} />
     </div>
   );
 }
-function MenuDrink() {
+
+function MenuDrink({ handlefirst, handlesecond, handlethird, handlefouth }) {
   return (
     <div className="menu-drinks">
-      <p>Coffee(8) / </p>
-      <p>Tea(5) /</p>
-      <p>Cocoa(8) / </p>
-      <p>Summer(12)</p>
+      <p onClick={handlefirst}>Coffee(8) / </p>
+      <p onClick={handlefouth}>Tea(5) /</p>
+      <p onClick={handlethird}>Cocoa(8) / </p>
+      <p onClick={handlefouth}>Summer(12)</p>
     </div>
   );
 }
-function MenuName() {
+
+function MenuName({ first, second, third, fouth }) {
   return (
-    <div className="menu-items">
+    <div className="menu-items">{first ? <TeaList /> : <CoffeeList />}</div>
+  );
+}
+
+function CoffeeList() {
+  return (
+    <>
       <LongBar />
       <div className="drinkname">
         <p>Filter coffee {"..."}</p>
         <p>Macchiato</p>
       </div>
       <LongBar />
-
       <div className="drinkname">
         <p>Americano {"..."}</p>
         <p>Mocco</p>
       </div>
       <LongBar />
-
       <div className="drinkname">
         <p>Capuccino {"..."}</p>
         <p>Chocolate </p>
@@ -271,7 +310,100 @@ function MenuName() {
         <p>Doppio</p>
       </div>
       <LongBar />
-    </div>
+    </>
+  );
+}
+
+function TeaList() {
+  return (
+    <>
+      <LongBar />
+      <div className="drinkname">
+        <p>Earl Grey {"..."}</p>
+        <p>Darjeeling</p>
+      </div>
+      <LongBar />
+      <div className="drinkname">
+        <p>Matcha {"..."}</p>
+        <p>Jasmine Green tea</p>
+      </div>
+      <LongBar />
+      <div className="drinkname">
+        <p>Chamomile {"..."}</p>
+        <p>Oolong </p>
+      </div>
+      <LongBar />
+      <div className="drinkname">
+        <p className="latte">
+          Rooibos
+          <span className="latte-span">45/60/90 ml</span>
+        </p>
+        <p>Peppermint</p>
+      </div>
+      <LongBar />
+    </>
+  );
+}
+
+function Cocoa() {
+  return (
+    <>
+      <LongBar />
+      <div className="drinkname">
+        <p>Criollo {"..."}</p>
+        <p>Forastero</p>
+      </div>
+      <LongBar />
+      <div className="drinkname">
+        <p>Trinitario {"..."}</p>
+        <p>Nacional</p>
+      </div>
+      <LongBar />
+      <div className="drinkname">
+        <p>Porcelana {"..."}</p>
+        <p>Arriba</p>
+      </div>
+      <LongBar />
+      <div className="drinkname">
+        <p className="latte">
+          Amelonado
+          <span className="latte-span">45/60/90 ml</span>
+        </p>
+        <p>Ocumare</p>
+      </div>
+      <LongBar />
+    </>
+  );
+}
+
+function Summer() {
+  return (
+    <>
+      <LongBar />
+      <div className="drinkname">
+        <p>Lemonade {"..."}</p>
+        <p>Iced Tea</p>
+      </div>
+      <LongBar />
+      <div className="drinkname">
+        <p>Mojito {"..."}</p>
+        <p>Pina Colada</p>
+      </div>
+      <LongBar />
+      <div className="drinkname">
+        <p>Watermelon Juice {"..."}</p>
+        <p>Anorld Palmer </p>
+      </div>
+      <LongBar />
+      <div className="drinkname">
+        <p className="latte">
+          Mango Lassi
+          <span className="latte-span">45/60/90 ml</span>
+        </p>
+        <p>Strawbery Smoothie</p>
+      </div>
+      <LongBar />
+    </>
   );
 }
 
