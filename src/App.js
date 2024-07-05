@@ -15,10 +15,12 @@ export default function App() {
         path="/menu"
         element={
           <>
-            <section className="sectwo">
+            <section>
               <Main />
-              <Menu />
-              <MenuItem />
+              <div className="sectwo">
+                <Menu />
+                <MenuItem />
+              </div>
               <Footer />
             </section>
           </>
@@ -132,7 +134,7 @@ function Main() {
 function Forimg() {
   return (
     <div className="img-center">
-      <p className="serenity"> Fensley brew</p>
+      <p className="serenity"> Touché Brew</p>
       <img src={imag} alt="model" height="100" />
     </div>
   );
