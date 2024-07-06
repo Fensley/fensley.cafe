@@ -186,6 +186,7 @@ function DataOne() {
     </div>
   );
 }
+
 function DataTwo() {
   return (
     <div className="one-d">
@@ -197,6 +198,7 @@ function DataTwo() {
     </div>
   );
 }
+
 function DataTwee() {
   return (
     <div className="one-d">
@@ -241,7 +243,6 @@ function MenuItem() {
     console.log(second);
   }
 
-  //
   function handlethird() {
     setThird(!third || !second);
     console.log(third);
