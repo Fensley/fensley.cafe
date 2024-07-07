@@ -182,7 +182,7 @@ function DataOne() {
     <div className="one-d">
       <i className="fa-solid fa-wifi"></i>
       <h2 className="thish2"> Free Wi-Fi</h2>
-      <p>Stay connected with our complimentary Wi-Fi service.</p>
+      <p> Stay connected with our complimentary Wi-Fi service.</p>
     </div>
   );
 }
