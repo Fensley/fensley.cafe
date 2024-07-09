@@ -243,19 +243,10 @@ function MenuItem() {
     console.log(second);
   }
 
-  function handlethird() {
-    setThird(!third || !second);
-    console.log(third);
-  }
-  function handlefouth() {
-    // setFirst(false);
-    // setSecond(true);
-    setFirst(true);
-    setThird(true);
-    setFouth(true);
-    console.log(fouth);
-  }
-  //
+  function handlethird() {}
+
+  function handlefouth() {}
+
   return (
     <div className="menu">
       <MenuDrink
@@ -273,7 +264,7 @@ function MenuDrink({ handlefirst, handlesecond, handlethird, handlefouth }) {
   return (
     <div className="menu-drinks">
       <p onClick={handlefirst}>Coffee(8) / </p>
-      <p onClick={handlefouth}>Tea(5) /</p>
+      <p onClick={handlesecond}>Tea(5) /</p>
       <p onClick={handlethird}>Cocoa(8) / </p>
       <p onClick={handlefouth}>Summer(12)</p>
     </div>
