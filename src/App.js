@@ -245,7 +245,7 @@ function MenuItem() {
 
   function handlethird() {}
 
-  function handlefouth() {}
+  // function handlefouth() {}
 
   return (
     <div className="menu">
