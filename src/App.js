@@ -20,6 +20,13 @@ export default function App() {
               <div className="sectwo">
                 <Menu />
                 <MenuItem />
+                <div className="Menu-img">
+                  <img
+                    src="https://images.unsplash.com/photo-1657313666513-70770d329ef4?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    alt="coffe"
+                    className="twocoffe"
+                  />
+                </div>
               </div>
               <Footer />
             </section>
@@ -229,23 +236,22 @@ function Menu() {
 }
 
 function MenuItem() {
-  const [first, setFirst] = useState(false);
-  const [second, setSecond] = useState(true);
-  const [third, setThird] = useState(true);
-  const [fouth, setFouth] = useState(true);
+  const [first, setFirst] = useState("coffee");
 
   function handlefirst() {
-    setFirst(!second);
-    console.log(first);
+    setFirst("coffee");
   }
   function handlesecond() {
-    setSecond(!second);
-    console.log(second);
+    setFirst("tea");
   }
 
-  function handlethird() {}
+  function handlethird() {
+    setFirst("cocoa");
+  }
 
-  // function handlefouth() {}
+  function handlefouth() {
+    setFirst("summer");
+  }
 
   return (
     <div className="menu">
@@ -255,7 +261,7 @@ function MenuItem() {
         handlethird={handlethird}
         handlefouth={handlefouth}
       />
-      <MenuName first={first} second={second} third={third} fouth={fouth} />
+      <MenuName first={first} />
     </div>
   );
 }
@@ -271,9 +277,14 @@ function MenuDrink({ handlefirst, handlesecond, handlethird, handlefouth }) {
   );
 }
 
-function MenuName({ first, second, third, fouth }) {
+function MenuName({ first }) {
   return (
-    <div className="menu-items">{first ? <TeaList /> : <CoffeeList />}</div>
+    <div className="menu-items">
+      {(first === "coffee" && <CoffeeList />) ||
+        (first === "tea" && <TeaList />) ||
+        (first === "cocoa" && <Cocoa />) ||
+        (first === "summer" && <Summer />)}
+    </div>
   );
 }
 
@@ -386,7 +397,6 @@ function Summer() {
       <LongBar />
       <div className="drinkname">
         <p>Watermelon Juice {"..."}</p>
-        <p>Anorld Palmer </p>
       </div>
       <LongBar />
       <div className="drinkname">
@@ -394,7 +404,6 @@ function Summer() {
           Mango Lassi
           <span className="latte-span">45/60/90 ml</span>
         </p>
-        <p>Strawbery Smoothie</p>
       </div>
       <LongBar />
     </>

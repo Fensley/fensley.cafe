@@ -190,8 +190,16 @@ footer {
 }
 /* for menu small screen */
 .sectwo {
-  height: 100vh;
   background-color: white;
+}
+.Menu-img {
+  margin: 20px 0;
+  text-align: center;
+}
+.twocoffe {
+  width: 100%;
+  display: none;
+  object-fit: cover;
 }
 @media (max-width: 744px) {
   .disco-second-child {
@@ -211,5 +219,10 @@ footer {
   }
   .last p {
     font-size: 9px;
+  }
+}
+@media (max-width: 1243px) {
+  .twocoffe {
+    display: block;
   }
 }
